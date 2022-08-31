@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Task 1 </title>
+	<link rel="icon" type="image/x-icon" href="images/favicon.png">
+	<link href="fontawesome/css/all.css" rel="stylesheet">
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	body{
+		font-family: sans-serif;
+	}
+	.navlist{
+		color: white; 
+		list-style: none;  
+		display: flex; 
+	    font-size: 1.3rem;
+	    padding: 20px 20px;
+	}
+	nav ul li{
+		padding: 20px 20px;
+	}
+	.start{
+		background-color:#03c8a7 ;
+		border-radius: 0px 0px 300px 300px;
+		position: relative;
+		height: 700px;
+	}
+	.start h1, p{
+        text-align: center;
+	}
+	.row{
+		display: flex;
+	}
+	.column{
+		text-align: center;
+		width: 33%;
+	}
+	.card1{
+		background-color: white;
+		color: black;
+		border-radius: 20px;
+		padding: 20px 0px;
+	}
+	.card2{
+		background-color: black;
+		color: white;
+		border-radius: 20px;
+		padding: 20px 0px;
+		margin-bottom: 10px;
+	}
+	.card3{
+		background-color: white;
+		color: black;
+		border-radius: 20px;
+        padding: 20px 0px;
+	}
+	ul li{
+		list-style: none;
+		text-align: center;
+	}
+	/*Slideshow container */
+	.slideshow-container{
+
+		max-width: 1000px;
+		position: relative;
+		margin: auto;
+	}
+	/*Hide the images by default*/
+	.mySlides{
+		display: none;
+	}
+	/* Next and Previous button*/
+	.prev, .next{
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+		width: auto;
+		margin-top: -25px;
+      padding: 15px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+	}
+	/*Position the "next button" to right*/
+	.next{
+		right: 0;
+		border-radius: 3px 0px 0px 3px;
+	}
+	/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #03c8a7;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/*FAQs*/
+.faq-container{
+	background-color: #333333;
+}
+.faq-header{
+	border-radius: 20px 20px 0 0;
+	padding: 10px 0px;
+	background: #333333;
+	color: white;
+	width: 100%;
+	display: flex;
+   align-content: center;
+   justify-content: center;
+
+}
+.faq-item{
+	margin-bottom: 40px;
+	margin-top: 40px;
+}
+
+.faq-body{
+	display: none;
+	margin-top: 30px;
+}
+
+.faq-wrapper{
+	width: 75%;
+	margin: 0 auto;
+}
+
+.faq-inner{
+	padding: 30px;
+	background: #333333;
+	color: white;
+}
+
+.faq-plus{
+	float: right;
+	font-size: 1.4rem;
+	line-height: 1em;
+	cursor: pointer;
+}
+
+/*Form*/
+#name{
+	padding: 20px 10px;
+	border: none;
+}
+#email{
+	padding: 20px 10px;
+	border: none;
+}
+#qualification{
+	padding: 20px 10px;
+	border: none;
+}
+#father{
+	padding: 20px 10px;
+	border: none;
+}
+#institute{
+	padding: 20px 10px;
+	border: none;
+}
+#submit{
+   background-color: black;
+   color: white;
+   padding: 5px 10px;
+   border-radius: 3px;
+}
+
+/*Upper footer*/
+.footera{
+   background-color: black;
+}
+
+.footer1{
+	color: white;
+	display: flex;
+	padding: 50px 200px;
+}
+#email1{
+	margin: 0px 200px;
+}
+.footer2{
+	color: white;
+	display: flex;
+	padding: 50px 200px;
+}
+
+.footer2-2 ul{
+list-style: none;
+margin: 0px 50px;
+}
+
+.footer2-3{
+	margin: 0px 150px;
+}
+
+.social-icon.facebook {
+    color: #3b5999;
+}
+
+.social-icon.instagram {
+    color: hotpink;
+    padding: 10px 30px;
+}
+
+.line{
+   margin-right: 50%;
+}
+	.footer{
+		display: flex;
+		background-color: #333333;
+		color: grey;
+	}
+	footer ul{
+		display: flex;
+	}
+	footer ul li{
+		list-style: none;
+		padding: 30px 10px;
+	}
+	footer p{
+		padding: 30px 100px;
+	}
+</style>
+</head>
+<body>
+	<!--header part-->
+     <header style="background-color:black;">
+     	<!--navbar-->
+     	<nav style="display: flex;">
+     		<!--logo of website-->
+     		<img src="images/logo2.png" alt="logo" style="width: 100px; height: 80px; padding: 10px 200px;">
+     		<!--list of pages with links-->
+     		<ul class="navlist">
+     			<li style="background-color: white; color: black; text-decoration: none;">Home</li>
+     			<li>Academics</li>
+     			<li>Career Counselling</li>
+     			<li>About</li>
+     			<li>Contact Us</li>
+     		</ul>
+     	</nav>
+     	<!--navbar end-->
+     </header>
+     <!--header end-->
+     <!--main part-->
+  <main>
+     	<div class="start">
+     		<br><br>
+     		<h1>Abonent 2584 Design</h1>
+     		<br><br>
+     		<p style="color: white;">It is a long established fact that a reader will be distracted by the readable <br>content of a page when looking at its layout.</p>
+     		<br><br>
+     		<div class="row">
+     			<div class="column">
+                   
+                </div>
+                <div class="column">
+                   <div class="card1">
+                   	<h3 style="color: #03c8a7;">Basic</h3>
+                   	<br><br>
+                   	<p>when looking at its layout</p>
+                   	<br>
+                   	<ul>
+                   		<li><i class="fa-solid fa-check" style="background-color: #03c8a7; border-radius: 10px;"></i>Some text here!</li>
+                   		<li><i class="fa-solid fa-check" style="background-color: #03c8a7; border-radius: 10px;"></i>Some text here!</li>
+                   		<li><i class="fa-solid fa-check" style="background-color: #03c8a7; border-radius: 10px;"></i>Some text here!</li>
+                   		<li><i class="fa-solid fa-check" style="background-color: #03c8a7; border-radius: 10px;"></i>Some text here!</li>
+                   		<li><i class="fa-solid fa-check" style="background-color: #03c8a7; border-radius: 10px;"></i>Some text here!</li>
+                   		<li><i class="fa-solid fa-check" style="background-color: #03c8a7; border-radius: 10px;"></i>Some text here!</li>
+                   	</ul><br>
+                   	<hr><br><br>
+                   	<p><b>$9.99</b>/month</p><br>
+                   	<button style="background-color:#03c8a7; color: white; padding: 10px; border: 1px solid white; border-radius: 5px;"><b>Choose</b></button>
+                   </div>
+                </div>
+                <div class="column">
+                   <div class="card2">
+                   	<h3 style="color: #03c8a7;">Pro Max Popular</h3>
+                   	<br><br>
+                   	<p>when looking at its layout</p>
+                   	<br>
+                   	<ul>
+                   		<li><i class="fa-solid fa-check" style="background-color: #03c8a7; border-radius: 10px;"></i>Some text here!</li>
+                   		<li><i class="fa-solid fa-check" style="background-color: #03c8a7; border-radius: 10px;"></i>Some text here!</li>
+                   		<li><i class="fa-solid fa-check" style="background-color: #03c8a7; border-radius: 10px;"></i>Some text here!</li>
+                   		<li><i class="fa-solid fa-check" style="background-color: #03c8a7; border-radius: 10px;"></i>Some text here!</li>
+                   		<li><i class="fa-solid fa-check" style="background-color: #03c8a7; border-radius: 10px;"></i>Some text here!</li>
+                   		<li><i class="fa-solid fa-check" style="background-color: #03c8a7; border-radius: 10px;"></i>Some text here!</li>
+                   	</ul><br>
+                   	<hr><br><br>
+                   	<p><b>$9.99</b>/month</p><br>
+                   	<button style="color:#03c8a7; background-color: white; padding: 10px; border: 1px solid white; border-radius: 5px;"><b>Choose</b></button>
+                   </div>
+                </div>
+                <div class="column">
+                   <div class="card3">
+                   	<h3 style="color: #03c8a7;">Premium</h3>
+                   	<br><br>
+                   	<p>when looking at its layout</p>
+                   	<br>
+                   	<ul>
+                   		<li><i class="fa-solid fa-check" style="background-color: #03c8a7; border-radius: 10px;"></i>Some text here!</li>
+                   		<li><i class="fa-solid fa-check" style="background-color: #03c8a7; border-radius: 10px;"></i>Some text here!</li>
+                   		<li><i class="fa-solid fa-check" style="background-color: #03c8a7; border-radius: 10px;"></i>Some text here!</li>
+                   		<li><i class="fa-solid fa-check" style="background-color: #03c8a7; border-radius: 10px;"></i>Some text here!</li>
+                   		<li><i class="fa-solid fa-check" style="background-color: #03c8a7; border-radius: 10px;"></i>Some text here!</li>
+                   		<li><i class="fa-solid fa-check" style="background-color: #03c8a7; border-radius: 10px;"></i>Some text here!</li>
+                   	</ul><br>
+                   	<hr><br><br>
+                   	<p><b>$9.99</b>/month</p><br>
+                   	<button style="background-color:#03c8a7; color: white; padding: 10px; border: 1px solid white; border-radius: 5px;"><b>Choose</b></button>
+                   </div>
+                </div>
+                <div class="column">
+                   
+                </div>
+            </div>
+            <br><br>
+     	</div>
+     	<!-- start div end-->
+     	<!-- center div -->
+     	<div style="background-color:#333333; padding-top: 100px; padding-bottom: 50px;">
+     		<h1 style="color:white; text-align: center;">Our Works</h1>
+     		<br><br>
+     		<!--slider-->
+     		<div class="slideshow-container">
+     			<div class="mySlides fade">
+     				<img src="images/b.png" alt="a" style="width:100%;">
+     			</div>
+     			<div class="mySlides fade">
+     				<img src="images/b.png" alt="b" style="width:100%;">
+     			</div>
+     			<div class="mySlides fade">
+     				<img src="images/b.png" alt="c" style="width:100%;">
+     			</div>
+     			<!--Next and previous button-->
+     			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+     			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+     		</div>
+     		<br>
+     		<!--The dot/circles-->
+     		<div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+         </div>
+         <br>
+         <p style="text-align:center; color: white;">See Our More Works</p><br>
+         <i class="fa-solid fa-arrow-down" style="background-color: #03c8a7; align: center;"></i>
+         <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+         <!--FAQs-->
+     		<div>
+     			<br>
+     			<br>
+              <div class="faq-container">
+              	<div class="row">
+              		<div class="faq-wrapper">
+              			<div class="faq-header">
+              				<h1>FAQs</h1>
+              			</div>
+              			<div class="faq-inner">
+              				<div class="faq-item">
+              					<h3>
+              						What is an FAQ page?
+              						<span class="faq-plus">&plus;</span>
+              					</h3>
+              					<div class="faq-body">
+              						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+              					</div>
+              				</div>
+              				<hr>
+              				<div class="faq-item">
+              					<h3>
+              						What is an FAQ page?
+              						<span class="faq-plus">&plus;</span>
+              					</h3>
+              					<div class="faq-body">
+              						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+              					</div>
+              				</div>
+              				<hr>
+              				<div class="faq-item">
+              					<h3>
+              						What is an FAQ page?
+              						<span class="faq-plus">&plus;</span>
+              					</h3>
+              					<div class="faq-body">
+              						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+              					</div>
+              				</div>
+              				<hr>
+              				<div class="faq-item">
+              					<h3>
+              						What is an FAQ page?
+              						<span class="faq-plus">&plus;</span>
+              					</h3>
+              					<div class="faq-body">
+              						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+              					</div>
+              				</div>
+              				<hr>
+              			</div>
+              		</div>
+              	</div>
+              </div>
+     		</div>
+     		<script type="text/javascript">
+      $(".faq-plus").on('click',function(){
+        $(this).parent().parent().find('.faq-body').slideToggle();
+      });
+    </script>
+    <!--Form-->
+    <br><br>
+     		<div style="background-color: #333333; margin: 50px 200px; ">
+     			<h1 style="color: white; text-align: center;">User Form</h1>
+     			<br><br>
+     			<form style=" justify-content: center; align-content: center; background-color: white; padding: 20px 20px; border-radius: 20px;">
+     				<label for="name">Name:</label>
+     				<input type="text" id="name">
+     				<label for="name">Email:</label>
+     				<input type="text" id="email"><br><hr>
+     				<label for="name">Qualification:</label>
+     				<input type="text" id="qualification">
+     				<label for="name">Father Name:</label>
+     				<input type="text" id="father"><br><hr>
+     				<label for="name">Institute Name:</label>
+     				<input type="text" id="institute"><br><br><hr><br>
+     				<button type="submit" id="submit">Submit</button>
+     			</form>
+     			<br><br>
+     		</div>
+     	</div>
+     	<!-- center div end-->
+     	<!--upper Footer-->
+     	<div class="footera">
+     	 <section class="footer1">
+      	         <div>
+      	         	<h3>whatsapp</h3>
+      	         	<p style="color: grey;">+33664730338</p>
+      	         </div>
+      	         <div id="email1">
+      	         	<h3>Email</br></h3>
+      	         	<p style="color: grey;">contact@2584design.com</p>
+      	         </div>
+
+      	         <div>
+      	         	
+      	         </div>
+      	         <br>
+      	         
+        </section>
+        <hr style="color: grey; margin-left: 200px; margin-right: 200px;">
+        <section class="footer2">
+      	         <div>
+      	         	<h2>2584 Design</h2></br>
+      	         	<p style="color: grey;">Lorem Ipsum is simply dummy text </br>
+      	         	of the printing and typesetting industry.</br>
+      	         	Lorem Ipsum has been the industry's </br>
+      	         	standard.</p></br>
+      	         	<h4>Links</h4><br><div class="line"><hr></div><br>
+      	         	<a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#" class="social-icon instagram"><i class="fa-brands fa-instagram"></i></a>
+      	         
+      	         </div>
+      	         <div class="footer2-2">
+      	         	
+      	         	<ul>
+      	         		<h3>Useful as</h3></br>
+      	         		<div class="line"><hr></div><br>
+      	         		<li style="color: grey; line-height: 1.5;">Home</li>
+      	         		<li style="color: grey; line-height: 1.5;">Cennik</li>
+      	         		<li style="color: grey; line-height: 1.5;">Kontakt</li>
+      	         		<li style="color: grey; line-height: 1.5;">FAQs</li>
+      	         		<li style="color: grey; line-height: 1.5;">Portfolio</li>
+      	         	</ul>
+      	         </div>
+      	         <div class="footer2-3">
+      	         	<h3>Email Address</h3></br>
+      	         	<div class="line"><hr></div><br>
+      	         	<input type="text" name="EmailAddress" placeholder="Email Address">
+      	         </div>
+        </section>
+     </div>
+     </main>
+     <!--footer part-->
+     <footer class="footer">
+     	<p>Copyright &copy; 2022, All Rights Reserved <b style="color: green;">Smash Code</b></p>
+     	<ul>
+     			<li>Home</li>
+     			<li>Academics</li>
+     			<li>Career Counselling</li>
+     			<li>About</li>
+     			<li>Contact Us</li>
+        </ul>
+     </footer>
+
+</body>
+</html>
