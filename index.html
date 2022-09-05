@@ -192,6 +192,21 @@
    padding: 5px 10px;
    border-radius: 3px;
 }
+.form{
+	 justify-content: center; 
+	 align-content: center; 
+	 background-color: white; 
+	 padding: 20px 20px; 
+	 border-radius: 20px;
+}
+.form-div{
+   background-color: #333333; 
+   margin: 50px 200px; 
+}
+.form-box{
+	display: flex;
+	flex-direction: column;
+}
 
 /*Upper footer*/
 .footera{
@@ -248,6 +263,11 @@ margin: 0px 50px;
 	footer p{
 		padding: 30px 100px;
 	}
+
+	@media(min-width: 600px){
+		 .form{
+    
+  }
 </style>
 </head>
 <body>
@@ -465,21 +485,33 @@ function showSlides(n) {
     </script>
     <!--Form-->
     <br><br>
-     		<div style="background-color: #333333; margin: 50px 200px; ">
+     		<div class="form-div">
      			<h1 style="color: white; text-align: center;">User Form</h1>
      			<br><br>
-     			<form style=" justify-content: center; align-content: center; background-color: white; padding: 20px 20px; border-radius: 20px;">
-     				<label for="name">Name:</label>
-     				<input type="text" id="name">
-     				<label for="name">Email:</label>
-     				<input type="text" id="email"><br><hr>
-     				<label for="name">Qualification:</label>
-     				<input type="text" id="qualification">
-     				<label for="name">Father Name:</label>
-     				<input type="text" id="father"><br><hr>
-     				<label for="name">Institute Name:</label>
-     				<input type="text" id="institute"><br><br><hr><br>
-     				<button type="submit" id="submit">Submit</button>
+     			<form class="form">
+     				<div class="form-box">
+     				  <label for="name">Name:</label>
+     				  <input type="text" id="name">
+     			  </div>
+     			  <div class="form-box">
+     				  <label for="email">Email:</label>
+     				  <input type="text" id="email">
+     				</div>
+     				<div class="form-box">
+     				  <label for="qualification">Qualification:</label>
+     				  <input type="text" id="qualification">
+     				</div>
+     				<div class="form-box">
+     				  <label for="father">Father Name:</label>
+     				  <input type="text" id="father">
+     				</div>
+     				<div class="form-box">   
+     				  <label for="institute">Institute Name:</label>
+     				  <input type="text" id="institute">
+     			  </div>
+     			  <div class="form-box">
+     				  <button type="submit" id="submit">Submit</button>
+     			  </div>
      			</form>
      			<br><br>
      		</div>
@@ -535,10 +567,13 @@ function showSlides(n) {
       	         </div>
         </section>
      </div>
-     </main>
+     
      <!--footer part-->
      <footer class="footer">
+     	<div>
      	<p>Copyright &copy; 2022, All Rights Reserved <b style="color: green;">Smash Code</b></p>
+      </div>
+      <div>
      	<ul>
      			<li>Home</li>
      			<li>Academics</li>
@@ -546,7 +581,8 @@ function showSlides(n) {
      			<li>About</li>
      			<li>Contact Us</li>
         </ul>
+      </div>
      </footer>
-
+</main>
 </body>
 </html>
