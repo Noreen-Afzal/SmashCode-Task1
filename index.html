@@ -12,10 +12,44 @@
 	*{
 		margin: 0px;
 		padding: 0px;
+		box-sizing: border-box;
 	}
 	body{
 		font-family: sans-serif;
 	}
+	/*****************
+	      HEADER
+	 *****************/     
+.header{
+  background-color:black;
+  width: 1170px;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px 10px;
+}
+.header > img{
+  float: left;
+  width: 100px; 
+  height: 80px;
+}
+.header a{
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+.header-right{
+	float: right;
+}
+.active{
+	background-color: white; 
+	color: black; 
+}
+/*
 	.navlist{
 		color: white; 
 		list-style: none;  
@@ -25,15 +59,21 @@
 	}
 	nav ul li{
 		padding: 20px 20px;
-	}
+	}*/
+
+	/****************
+	   First Section
+	 ****************/  
 	.start{
 		background-color:#03c8a7 ;
 		border-radius: 0px 0px 300px 300px;
 		position: relative;
 		height: 700px;
+		width: 1170px;
+    margin: auto;
 	}
 	.start h1, p{
-        text-align: center;
+    text-align: center;
 	}
 	.row{
 		display: flex;
@@ -59,13 +99,23 @@
 		background-color: white;
 		color: black;
 		border-radius: 20px;
-        padding: 20px 0px;
+    padding: 20px 0px;
 	}
 	ul li{
 		list-style: none;
 		text-align: center;
 	}
-	/*Slideshow container */
+
+	/********************
+	 Slideshow container 
+	 ********************/
+	.center{
+		background-color:#333333; 
+		padding-top: 100px; 
+		padding-bottom: 50px;
+		width: 1170px;
+    margin: auto;
+	}
 	.slideshow-container{
 
 		max-width: 1000px;
@@ -83,13 +133,13 @@
 		top: 50%;
 		width: auto;
 		margin-top: -25px;
-      padding: 15px;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
 	}
 	/*Position the "next button" to right*/
 	.next{
@@ -110,19 +160,23 @@
 .active, .dot:hover {
   background-color: #717171;
 }
-
 /* Fading animation */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
 }
-
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
 }
 
-/*FAQs*/
+/*********
+   FAQs
+ *********/
+.faqs{
+	width: 1170px;
+  margin: auto;
+}
 .faq-container{
 	background-color: #333333;
 }
@@ -133,8 +187,8 @@
 	color: white;
 	width: 100%;
 	display: flex;
-   align-content: center;
-   justify-content: center;
+  align-content: center;
+  justify-content: center;
 
 }
 .faq-item{
@@ -165,7 +219,10 @@
 	cursor: pointer;
 }
 
-/*Form*/
+/*******
+  Form
+********/
+
 #name{
 	padding: 20px 10px;
 	border: none;
@@ -192,6 +249,11 @@
    padding: 5px 10px;
    border-radius: 3px;
 }
+.form-div{
+   background-color: #333333; 
+   width: 1170px;
+   margin: auto; 
+}
 .form{
 	 justify-content: center; 
 	 align-content: center; 
@@ -199,20 +261,61 @@
 	 padding: 20px 20px; 
 	 border-radius: 20px;
 }
-.form-div{
-   background-color: #333333; 
-   margin: 50px 200px; 
-}
+
 .form-box{
 	display: flex;
 	flex-direction: column;
 }
 
-/*Upper footer*/
+/************
+ Upper footer
+ ************/
+ .upper-footer{
+ 	 background-color: black;
+   width: 1170px;
+   margin: auto;
+ }
+ .upper{
+  color: white;
+	display: flex;
+	padding: 50px 200px;
+ }
+ .lower{
+ 	color: white;
+	display: flex;
+	padding: 50px 200px;
+ }
+ .social-icon.facebook {
+    color: #3b5999;
+}
+.social-icon.instagram {
+    color: hotpink;
+    padding: 10px 30px;
+}
+.first{
+	width: 25%;
+}
+.second{
+	width: 25%;
+}
+.third{
+	width: 50%;
+}
+.line{
+   margin-right: 50%;
+   }
+ .lower ul li{
+ 	list-style: none;
+margin: 0px 50px
+ }
+ /*
+}
+}
 .footera{
    background-color: black;
+   width: 1170px;
+   margin: auto;
 }
-
 .footer1{
 	color: white;
 	display: flex;
@@ -226,58 +329,130 @@
 	display: flex;
 	padding: 50px 200px;
 }
-
 .footer2-2 ul{
 list-style: none;
 margin: 0px 50px;
 }
-
 .footer2-3{
 	margin: 0px 150px;
 }
-
 .social-icon.facebook {
     color: #3b5999;
 }
-
 .social-icon.instagram {
     color: hotpink;
     padding: 10px 30px;
 }
-
 .line{
    margin-right: 50%;
-}
-	.footer{
-		display: flex;
-		background-color: #333333;
-		color: grey;
-	}
-	footer ul{
-		display: flex;
-	}
-	footer ul li{
-		list-style: none;
-		padding: 30px 10px;
-	}
-	footer p{
-		padding: 30px 100px;
-	}
+}*/
 
-	@media(min-width: 600px){
-		 .form{
-    
-  }
+/*************
+  Main Footer
+ ************/
+.footer{
+	background-color: #333333;
+	color: grey;
+  width: 1170px;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px 10px;
+	}
+	.footer h4{
+		float: left;
+		text-align: center;
+	} 
+	.footer-right{
+		float: right;
+	}
+	.footer a{
+  float: left;
+  color: grey;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+	
+/*************
+  Media Query
+ ************/
+	/*For Tab*/
+	@media only screen and (min-width: 200px) and (max-width: 567px){
+   
+/*For Mobile*/
+	@media only screen and (min-width: 200px) and (max-width: 567px){
+    .header{
+    	width: 100%;
+    }
+    .header a{
+    	float: none;
+      width: 100%; 
+      display: block;
+    }
+    .header img{
+      float: none;
+      width: 100%; 
+      display: block;
+    }
+    .header-right{
+    	 float: none;
+    }
+    .start{
+    	width: 100%;
+    }
+    .center{
+    	width: 100%;
+    }
+    .faqs{
+    	width: 100%;
+    }
+    .form-div{
+    	width: 100%;
+    }
+    .upper-footer{
+    	width: 100%;
+    }
+    .upper, .lower{
+    	width: 100%;
+    }
+    .first{
+	    width: 25%;
+    }
+    .second{
+	    width: 25%;
+    }
+    .third{
+     	width: 50%;
+    }
+    .footer{
+    	width: 100%;
+    }
+    .footer a{
+    	float: none;
+      width: 100%; 
+      display: block;
+    }
+    .footer h4{
+      float: none;
+      width: 100%; 
+      display: block;
+    }
+    .footer-right{
+    	 float: none;
+	}
 </style>
 </head>
 <body>
-	<!--header part-->
+	<!--header part
      <header style="background-color:black;">
-     	<!--navbar-->
+     
      	<nav style="display: flex;">
-     		<!--logo of website-->
+     		
      		<img src="images/logo2.png" alt="logo" style="width: 100px; height: 80px; padding: 10px 200px;">
-     		<!--list of pages with links-->
+     		
      		<ul class="navlist">
      			<li style="background-color: white; color: black; text-decoration: none;">Home</li>
      			<li>Academics</li>
@@ -286,10 +461,21 @@ margin: 0px 50px;
      			<li>Contact Us</li>
      		</ul>
      	</nav>
-     	<!--navbar end-->
-     </header>
+     	
+     </header>-->
      <!--header end-->
      <!--main part-->
+  <div class="header">
+
+        <img src="images/logo2.png" alt="logo">
+    <div class="header-right">    
+    	<a class="active" href="#home">Home</a>
+    	<a href="#contact">Contact</a>
+    	<a href="#about">About</a>
+    	<a href="#home">Portfolio</a>
+    	<a href="#home">Blog</a>
+    </div>
+  </div>
   <main>
      	<div class="start">
      		<br><br>
@@ -300,7 +486,7 @@ margin: 0px 50px;
      		<div class="row">
      			<div class="column">
                    
-                </div>
+          </div>
                 <div class="column">
                    <div class="card1">
                    	<h3 style="color: #03c8a7;">Basic</h3>
@@ -366,7 +552,7 @@ margin: 0px 50px;
      	</div>
      	<!-- start div end-->
      	<!-- center div -->
-     	<div style="background-color:#333333; padding-top: 100px; padding-bottom: 50px;">
+     	<div class="center">
      		<h1 style="color:white; text-align: center;">Our Works</h1>
      		<br><br>
      		<!--slider-->
@@ -423,7 +609,7 @@ function showSlides(n) {
 }
 </script>
          <!--FAQs-->
-     		<div>
+     		<div class="faqs">
      			<br>
      			<br>
               <div class="faq-container">
@@ -517,7 +703,7 @@ function showSlides(n) {
      		</div>
      	</div>
      	<!-- center div end-->
-     	<!--upper Footer-->
+     	<!--upper Footer
      	<div class="footera">
      	 <section class="footer1">
       	         <div>
@@ -566,23 +752,62 @@ function showSlides(n) {
       	         	<input type="text" name="EmailAddress" placeholder="Email Address">
       	         </div>
         </section>
-     </div>
+     </div>-->
+      <div class="upper-footer">
+      	<div class="upper">
+      	  <div class="first">
+      	      <h3>whatsapp</h3>
+      	      <p style="color: grey;">+33664730338</p> 	
+      	  </div>
+      	  <div class="second">
+      	  	  <h3>Email</br></h3>
+      	      <p style="color: grey;">contact@2584design.com</p>
+      	  </div>
+      	  <div class="third">
+      	  	
+      	  </div>
+      	</div> 
+      	<div class="lower">
+      		<div class="first">
+      	      <h2>2584 Design</h2></br>
+      	      <p style="color: grey;">Lorem Ipsum is simply dummy text </br>
+      	         	of the printing and typesetting industry.</br>
+      	         	Lorem Ipsum has been the industry's </br>
+      	         	standard.</p></br>
+      	      <h4>Links</h4><br><div class="line"><hr></div><br>
+      	      <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-icon instagram"><i class="fa-brands fa-instagram"></i></a>
+      	  </div>
+      	  <div class="second">
+      	  	  <ul>
+      	        <h3>Useful as</h3></br>
+      	        <div class="line"><hr></div><br>
+      	        <li style="color: grey; line-height: 1.5;">Home</li>
+      	        <li style="color: grey; line-height: 1.5;">Cennik</li>
+      	        <li style="color: grey; line-height: 1.5;">Kontakt</li>
+      	        <li style="color: grey; line-height: 1.5;">FAQs</li>
+      	        <li style="color: grey; line-height: 1.5;">Portfolio</li>
+      	      </ul>
+      	  </div>
+      	  <div class="third">
+      	  	    <h3>Email Address</h3></br>
+      	        <div class="line"><hr></div><br>
+      	        <input type="text" name="EmailAddress" placeholder="Email Address">
+      	  </div>
+      	</div> 
+      </div>
      
      <!--footer part-->
-     <footer class="footer">
-     	<div>
-     	<p>Copyright &copy; 2022, All Rights Reserved <b style="color: green;">Smash Code</b></p>
+     <div class="footer">
+     	<h4>Copyright &copy; 2022, All Rights Reserved <b style="color: green;">Smash Code</b></h4>
+      <div class="footer-right">    
+    	  <a href="#home">Home</a>
+    	  <a href="#contact">Contact</a>
+    	  <a href="#about">About</a>
+    	  <a href="#home">Portfolio</a>
+    	  <a href="#home">Blog</a>
       </div>
-      <div>
-     	<ul>
-     			<li>Home</li>
-     			<li>Academics</li>
-     			<li>Career Counselling</li>
-     			<li>About</li>
-     			<li>Contact Us</li>
-        </ul>
-      </div>
-     </footer>
+    </div>
 </main>
 </body>
 </html>
