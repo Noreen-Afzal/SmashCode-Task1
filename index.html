@@ -270,20 +270,64 @@
 /************
  Upper footer
  ************/
- .upper-footer{
+.container-1{
+  display: flex;
+	background-color: black;
+	color: white;
+	width: 1170px;
+	padding: 20px;
+}
+.container-1 div{
+	padding: 10px;
+}
+.box-1{
+	flex: 1;
+	text-align: center;
+}
+.box-2{
+  flex: 1;
+  text-align: center;
+}
+.box-3{
+  flex: 2;
+}
+.container-2{
+  display: flex;
+	background-color: black;
+	color: white;
+	padding: 20px;
+	width: 1170px;
+}
+.container-2 div{
+	padding: 10px;
+}
+.box-4{
+	flex: 1;
+	text-align: center;
+}
+.box-5{
+	flex: 1;
+	text-align: center;
+}
+.box-6{
+	flex: 2;
+	text-align: center;
+}
+.social-icon.facebook {
+  color: #3b5999;
+}
+.social-icon.instagram {
+  color: hotpink;
+  padding: 10px 30px;
+}
+
+ /*.upper-footer{
  	 background-color: black;
    width: 1170px;
    margin: auto;
- }
- .upper{
-  color: white;
-	display: flex;
-	padding: 50px 200px;
- }
- .lower{
- 	color: white;
-	display: flex;
-	padding: 50px 200px;
+   display: flex;
+   color: white;
+   padding: 50px 200px;
  }
  .social-icon.facebook {
     color: #3b5999;
@@ -293,13 +337,13 @@
     padding: 10px 30px;
 }
 .first{
-	width: 25%;
+  flex: 1;
 }
 .second{
-	width: 25%;
+	 flex: 1;
 }
 .third{
-	width: 50%;
+	 flex: 1;
 }
 .line{
    margin-right: 50%;
@@ -307,7 +351,7 @@
  .lower ul li{
  	list-style: none;
 margin: 0px 50px
- }
+ }*/
  /*
 }
 }
@@ -380,8 +424,87 @@ margin: 0px 50px;
   Media Query
  ************/
 	/*For Tab*/
-	@media only screen and (min-width: 200px) and (max-width: 567px){
-   
+	@media only screen and (min-width: 568px) and (max-width: 992px){
+    .header{
+    	width: 100%;
+    }
+    .header a{
+    	float: none;
+      width: 100%; 
+      display: block;
+    }
+    .header img{
+      float: none;
+      width: 100%; 
+      display: block;
+    }
+    .header-right{
+    	 float: none;
+    }
+    .start{
+    	width: 100%;
+    }
+    .center{
+    	width: 100%;
+    }
+    .faqs{
+    	width: 100%;
+    }
+    .form-div{
+    	width: 100%;
+    }
+    .upper-footer{
+    	width: 100%;
+    }
+    .first{
+	    float: none;
+      width: 100%; 
+      display: block;
+    }
+    .second{
+	    float: none;
+      width: 100%; 
+      display: block;
+    }
+    .third{
+     	wfloat: none;
+      width: 100%; 
+      display: block;
+    }
+    .container-1{
+			width: 100%;
+			display: block;
+		}
+		.container-2{
+			width: 100%;
+			display: block;
+		}
+		.box-1,
+		.box-2,
+		.box-3,
+		.box-4,
+		.box-5,
+		.box-6,
+		{
+		  width: 100%;
+		}
+    .footer{
+    	width: 100%;
+    }
+    .footer a{
+    	float: none;
+      width: 100%; 
+      display: block;
+    }
+    .footer h4{
+      float: none;
+      width: 100%; 
+      display: block;
+    }
+    .footer-right{
+    	 float: none;
+	}
+}
 /*For Mobile*/
 	@media only screen and (min-width: 200px) and (max-width: 567px){
     .header{
@@ -415,18 +538,38 @@ margin: 0px 50px;
     .upper-footer{
     	width: 100%;
     }
-    .upper, .lower{
-    	width: 100%;
-    }
     .first{
-	    width: 25%;
+	    float: none;
+      width: 100%; 
+      display: block;
     }
     .second{
-	    width: 25%;
+	    float: none;
+      width: 100%; 
+      display: block;
     }
     .third{
-     	width: 50%;
+     	wfloat: none;
+      width: 100%; 
+      display: block;
     }
+    .container-1{
+			width: 100%;
+			display: block;
+		}
+		.container-2{
+			width: 100%;
+			display: block;
+		}
+		.box-1,
+		.box-2,
+		.box-3,
+		.box-4,
+		.box-5,
+		.box-6,
+		{
+		  width: 100%;
+		}
     .footer{
     	width: 100%;
     }
@@ -443,6 +586,7 @@ margin: 0px 50px;
     .footer-right{
     	 float: none;
 	}
+}
 </style>
 </head>
 <body>
@@ -752,34 +896,24 @@ function showSlides(n) {
       	         	<input type="text" name="EmailAddress" placeholder="Email Address">
       	         </div>
         </section>
-     </div>-->
+     </div>
       <div class="upper-footer">
-      	<div class="upper">
       	  <div class="first">
       	      <h3>whatsapp</h3>
-      	      <p style="color: grey;">+33664730338</p> 	
-      	  </div>
-      	  <div class="second">
-      	  	  <h3>Email</br></h3>
-      	      <p style="color: grey;">contact@2584design.com</p>
-      	  </div>
-      	  <div class="third">
-      	  	
-      	  </div>
-      	</div> 
-      	<div class="lower">
-      		<div class="first">
+      	      <p style="color: grey;">+33664730338</p>
       	      <h2>2584 Design</h2></br>
       	      <p style="color: grey;">Lorem Ipsum is simply dummy text </br>
       	         	of the printing and typesetting industry.</br>
       	         	Lorem Ipsum has been the industry's </br>
       	         	standard.</p></br>
       	      <h4>Links</h4><br><div class="line"><hr></div><br>
-      	      <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" class="social-icon instagram"><i class="fa-brands fa-instagram"></i></a>
+      	      <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a> 
+      	      <a href="#" class="social-icon instagram"><i class="fa-brands fa-instagram"></i></a>	
       	  </div>
       	  <div class="second">
-      	  	  <ul>
+      	  	  <h3>Email</br></h3>
+      	      <p style="color: grey;">contact@2584design.com</p>
+      	      <ul>
       	        <h3>Useful as</h3></br>
       	        <div class="line"><hr></div><br>
       	        <li style="color: grey; line-height: 1.5;">Home</li>
@@ -790,13 +924,54 @@ function showSlides(n) {
       	      </ul>
       	  </div>
       	  <div class="third">
-      	  	    <h3>Email Address</h3></br>
+      	  	<h3>Email Address</h3></br>
       	        <div class="line"><hr></div><br>
       	        <input type="text" name="EmailAddress" placeholder="Email Address">
       	  </div>
-      	</div> 
-      </div>
-     
+
+      </div>-->
+  
+     <div class="container-1">
+     	   <div class="box-1">
+     	   	  <h3>whatsapp</h3>
+      	    <p style="color: grey;">+33664730338</p>
+     	   </div>
+     	   <div class="box-2">
+     	   	  <h3>Email</h3>
+      	    <p style="color: grey;">contact@2584design.com</p>
+     	   </div>
+     	   <div class="box-3">
+     	   	
+     	   </div>
+     </div>
+     <div class="container-2">
+     	   <div class="box-4">
+     	   	  <h2>2584 Design</h2></br>
+    	      <p style="color: grey;">Lorem Ipsum is simply dummy text </br>
+    	         	of the printing and typesetting industry.</br>
+    	         	Lorem Ipsum has been the industry's </br>
+    	         	standard.</p></br>
+    	      <h4>Links</h4><br><div class="line"><hr></div><br>
+    	      <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a> 
+    	      <a href="#" class="social-icon instagram"><i class="fa-brands fa-instagram"></i></a>
+     	   </div>
+     	   <div class="box-5">
+     	   	  <ul>
+	         		<h3>Useful as</h3></br>
+	         		<div class="line"><hr></div><br>
+	         		<li style="color: grey; line-height: 1.5;">Home</li>
+	         		<li style="color: grey; line-height: 1.5;">Cennik</li>
+	         		<li style="color: grey; line-height: 1.5;">Kontakt</li>
+	         		<li style="color: grey; line-height: 1.5;">FAQs</li>
+	         		<li style="color: grey; line-height: 1.5;">Portfolio</li>
+	         	</ul>
+     	   </div>
+     	   <div class="box-6">
+     	   	  <h3>Email Address</h3></br>
+  	        <div class="line"><hr></div><br>
+  	        <input type="text" name="EmailAddress" placeholder="Email Address">
+     	   </div>
+     </div>
      <!--footer part-->
      <div class="footer">
      	<h4>Copyright &copy; 2022, All Rights Reserved <b style="color: green;">Smash Code</b></h4>
